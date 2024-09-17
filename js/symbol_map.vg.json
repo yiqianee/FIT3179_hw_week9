@@ -16,21 +16,27 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/yiqianee/FIT3179_hw_week9/main/js/ne_110m.json",
-        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+        "graticule": {
+          "step": [10, 10]  
+        }
       },
-      "mark": {"type": "geoshape", "fill": "lightblue", "stroke": "white"}
+      "mark": {
+        "type": "geoshape",
+        "stroke": "gray",  
+        "strokeWidth": 0.25
+      }
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/yiqianee/FIT3179_hw_week9/main/js/ne_110m.json",
-        "format": {"type": "topojson", "feature": "ne_110m_graticules_5"}
+        "url": "https://raw.githubusercontent.com/yiqianee/FIT3179_hw_week9/main/js/aus_map.json",
+        "format": {"type": "topojson", "feature": "ne_50m_admin_1_states_provinces"}
       },
-      "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+      "mark": {"type": "geoshape", "fill": "lightblue", "stroke": "gray"}
     },
+
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/yiqianee/FIT3179_hw_week9/main/data/au-airports.csv"
+        "url": "https://raw.githubusercontent.com/yiqianee/FIT3179_Week9/refs/heads/main/data/au-airports.csv"
       },
       "transform": [
         {
@@ -45,7 +51,7 @@
         "size": {
           "condition": {
             "test": "datum.type === 'large_airport'",  
-            "value": 150  
+            "value": 250  
           },
           "value": 50  
         },
